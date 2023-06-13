@@ -11,6 +11,10 @@ export class CustomValidatorsModule {
   static licensePlateValidator(
     control: AbstractControl
   ): ValidationErrors | null {
+    if (control.errors?.required) {
+      return null;
+    }
+
     const ktCheck = new KentekenCheck(control.value);
     if (ktCheck.valid) {
       return null;
