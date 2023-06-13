@@ -88,7 +88,6 @@
       <button
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         type="submit"
-        [attr.disabled]="vehicleForm.invalid ? true : null"
         (click)="onVehicleFormSubmit()"
       >
         Verzenden
@@ -97,9 +96,10 @@
   </form>
   <picture>
     <img
+      class="object-cover h-full w-full"
+      *ngIf="getVehicleImageUrl()"
       [src]="'./assets/' + getVehicleImageUrl()"
       [alt]="getVehicleType()"
-      class="object-cover h-full w-full"
     />
   </picture>
 </div>

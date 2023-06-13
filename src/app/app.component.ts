@@ -116,6 +116,7 @@ export class AppComponent {
 
   onVehicleFormSubmit() {
     if (this.vehicleForm.invalid) {
+      this.vehicleForm.markAllAsTouched();
       return;
     }
 
