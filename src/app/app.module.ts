@@ -5,9 +5,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { StoreModule } from '@ngrx/store';
+import { VehicleFormComponent } from './components/vehicle-form/vehicle-form.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, VehicleFormComponent],
   imports: [
     BrowserModule,
     NgxMaskModule.forRoot(),
